@@ -69,7 +69,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:451619879773:task-definition/bol-mancala-task-defination:1",
+  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:451619879773:task-definition/bol-mancala-task-defination:2",
   "family": "bol-mancala-task-defination",
   "requiresAttributes": [
     {
@@ -100,6 +100,12 @@
       "targetId": null,
       "targetType": null,
       "value": null,
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
     },
     {
@@ -111,12 +117,16 @@
   ],
   "pidMode": null,
   "requiresCompatibilities": [
+    "EC2",
     "FARGATE"
   ],
   "networkMode": "awsvpc",
-  "runtimePlatform": null,
+  "runtimePlatform": {
+    "operatingSystemFamily": "LINUX",
+    "cpuArchitecture": null
+  },
   "cpu": "256",
-  "revision": 1,
+  "revision": 2,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,

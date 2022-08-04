@@ -42,7 +42,7 @@
       "memoryReservation": 512,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "httpd:2.4",
+      "image": "451619879773.dkr.ecr.eu-central-1.amazonaws.com/bol-mancala-repo:43a0fff400bf5ec3a18554444b23b7b437fadaa0",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -50,7 +50,7 @@
       "interactive": null,
       "healthCheck": null,
       "essential": true,
-      "links": [],
+      "links": null,
       "hostname": null,
       "extraHosts": null,
       "pseudoTerminal": null,
@@ -69,7 +69,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:451619879773:task-definition/bol-mancala-task-defination:2",
+  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:451619879773:task-definition/bol-mancala-task-defination:3",
   "family": "bol-mancala-task-defination",
   "requiresAttributes": [
     {
@@ -88,6 +88,12 @@
       "targetId": null,
       "targetType": null,
       "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
     },
     {
@@ -101,6 +107,12 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-ecr-pull"
     },
     {
       "targetId": null,
@@ -126,7 +138,7 @@
     "cpuArchitecture": null
   },
   "cpu": "256",
-  "revision": 2,
+  "revision": 3,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
